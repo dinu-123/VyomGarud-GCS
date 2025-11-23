@@ -1,0 +1,30 @@
+/* src/App.css */
+
+/* Generic layout wrapper for all inner pages */
+.page {
+  padding: 24px 32px 40px;
+  box-sizing: border-box;
+}
+
+/* Dashboard should have light grey background, NOT the dark one we had before */
+.dashboard-page {
+  background-color: #f3f4f6; /* light grey like screenshot */
+  min-height: calc(100vh - 64px); /* roughly minus top-bar height */
+}
+
+/* Simple header helper if you need on other pages */
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}

@@ -1,0 +1,44 @@
+# fastapi
+# uvicorn[standard]
+# pydantic
+# python-multipart
+# websockets
+
+
+
+# fastapi
+# uvicorn[standard]
+# pydantic
+# python-multipart
+# websockets
+
+
+
+
+# fastapi
+# uvicorn[standard]
+# redis           # redis-py with asyncio support
+# pydantic
+# python-multipart
+# websockets
+# # optional for MAVLink publisher:
+# mavsdk          # only if you plan to use MAVSDK (pip install mavsdk)
+
+
+
+
+# fastapi
+# uvicorn[standard]
+# websockets
+# pydantic
+# python-multipart
+
+
+
+fastapi==0.121.2
+uvicorn[standard]==0.38.0
+websockets==15.0.1
+pydantic==2.12.4
+python-multipart==0.0.6
+# optional, only needed if you want to connect to a real MAVLink endpoint
+pymavlink==4.0.3

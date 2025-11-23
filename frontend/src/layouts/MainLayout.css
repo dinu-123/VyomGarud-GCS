@@ -1,0 +1,119 @@
+/* src/layouts/MainLayout.css */
+
+.console-shell {
+  display: flex;
+  min-height: 100vh;
+  color: #e5edf9;
+}
+
+/* Sidebar */
+.console-sidebar {
+  width: 260px;
+  background: #020617;
+  padding: 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.console-logo {
+  padding: 8px 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.console-logo img {
+  width: 170px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Nav */
+.console-nav {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.console-nav-section-label {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.console-nav-link {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #cbd5f5;
+  text-decoration: none;
+  margin-bottom: 4px;
+  transition: background 0.15s ease, color 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.console-nav-link:hover {
+  background: rgba(148, 163, 255, 0.14);
+  border-color: rgba(129, 140, 248, 0.2);
+}
+
+.console-nav-link.is-active {
+  background: #1d4ed8;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.console-logout {
+  margin-top: 12px;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Main area */
+.console-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 32px 32px;
+  background: radial-gradient(circle at top left, #f3f6ff 0, #d9e3ff 40%, #c6d3ff 100%);
+}
+
+/* Header */
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.console-org-pill {
+  background: #bbf7d0;
+  color: #022c22;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.console-user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #020617;
+  color: #e5edf9;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Content */
+.console-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 8px;
+}

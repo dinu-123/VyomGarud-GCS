@@ -1,0 +1,442 @@
+/* ------------------------------
+   Flight Detail Layout
+------------------------------ */
+
+.flight-detail-page {
+  padding: 32px 40px 48px;
+  color: #f4f6ff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    Segoe UI, sans-serif;
+}
+
+/* Top bar / breadcrumbs + status chip */
+
+.flight-detail-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #9ca9d6;
+}
+
+.breadcrumbs a {
+  color: #c7d4ff;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.flight-status-chip {
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.chip-complete {
+  background: rgba(42, 179, 116, 0.13);
+  color: #31c283;
+  border-color: rgba(72, 199, 139, 0.6);
+}
+
+.chip-noinfo {
+  background: rgba(222, 158, 78, 0.13);
+  color: #ffb454;
+  border-color: rgba(255, 180, 84, 0.6);
+}
+
+/* ------------------------------
+   Header card (location + stats)
+------------------------------ */
+
+.flight-header-card {
+  margin-top: 8px;
+  padding: 22px 26px;
+  border-radius: 26px;
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(135deg, #1b2142 0%, #12172e 35%, #070b1b 100%);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.flight-header-left {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header-location-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.flight-location {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.flight-date-label {
+  font-size: 13px;
+  color: #b3c0ee;
+}
+
+/* Timeline slider */
+
+.timeline-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.timeline-time {
+  font-size: 12px;
+  font-weight: 500;
+  color: #c4ceff;
+}
+
+.timeline-track {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2c3358 0%, #1b1f39 100%);
+  overflow: hidden;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 55%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.timeline-thumb {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3);
+}
+
+/* Pilot / drone meta row */
+
+.timeline-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.meta-block {
+  min-width: 150px;
+}
+
+.meta-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8d97c2;
+}
+
+.meta-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e5ebff;
+  margin-top: 4px;
+}
+
+/* Right stats grid */
+
+.flight-header-right {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+}
+
+.header-stat {
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.12),
+      transparent 65%
+    ),
+    linear-gradient(135deg, #111629, #050715);
+  border-radius: 18px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stat-label {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a95c3;
+}
+
+.stat-value {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #f5f7ff;
+}
+
+/* ------------------------------
+   Map card
+------------------------------ */
+
+.flight-map-card {
+  margin-top: 26px;
+  padding: 18px 20px 20px;
+  border-radius: 26px;
+  background: linear-gradient(145deg, #050716, #050814);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 12px;
+}
+
+.checkbox-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #c4cdef;
+}
+
+.checkbox-inline input[type="checkbox"] {
+  accent-color: #2563eb;
+}
+
+/* Map container */
+
+.map-wrapper {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.flight-map {
+  width: 100%;
+  height: 360px;
+}
+
+/* Ensure the Leaflet map fills wrapper */
+.map-wrapper .leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------------------
+   Metrics / charts section
+------------------------------ */
+
+.flight-metrics-section {
+  margin-top: 32px;
+}
+
+.metrics-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #f5f7ff;
+}
+
+.flight-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Individual metric card */
+
+.metric-card {
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.12),
+      transparent 60%
+    ),
+    linear-gradient(145deg, #050716, #050814);
+  border-radius: 22px;
+  padding: 12px 14px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.metric-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e6ebff;
+}
+
+.metric-scale-select {
+  background: rgba(16, 24, 56, 0.85);
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 255, 0.4);
+  padding: 2px 10px;
+  font-size: 11px;
+  color: #d2d9ff;
+  outline: none;
+}
+
+.metric-scale-select:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+/* The recharts container will stretch to this height */
+.metric-chart {
+  margin-top: 4px;
+  height: 220px;
+}
+
+/* ------------------------------
+   Responsiveness
+------------------------------ */
+
+@media (max-width: 1100px) {
+  .flight-header-card {
+    flex-direction: column;
+  }
+
+  .flight-header-right {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .flight-map {
+    height: 320px;
+  }
+
+  .flight-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .flight-detail-page {
+    padding: 24px 18px 32px;
+  }
+
+  .flight-header-card {
+    padding: 18px 16px;
+    border-radius: 20px;
+  }
+
+  .flight-header-right {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-row {
+    grid-template-columns: auto 1fr;
+    grid-auto-flow: row;
+    row-gap: 6px;
+  }
+
+  .timeline-row .timeline-time:last-child {
+    justify-self: flex-end;
+  }
+
+  .flight-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-chart {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .flight-detail-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .flight-map {
+    height: 260px;
+  }
+}
+
+
+
+
+/* ---- Drone Path Map card ---- */
+
+.flight-map-card {
+  margin-top: 24px;
+  background: linear-gradient(135deg, #050816, #040714);
+  border-radius: 24px;
+  padding: 20px 28px 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Wrapper that defines the height of the map */
+.flight-map-card .map-wrapper {
+  margin-top: 16px;
+  height: 380px;           /* 👈 increase/decrease as you like */
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Make Leaflet map fill the wrapper */
+.flight-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Safety: ensure any Leaflet container respects our height */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}

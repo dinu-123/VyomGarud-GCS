@@ -1,0 +1,54 @@
+/* src/index.css */
+
+/* If Tailwind is installed, keep these. If not, they are harmless. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global VyomGarud GCS styles */
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* light background like original console */
+body {
+  background: radial-gradient(circle at top left, #f3f6ff 0, #dde7ff 40%, #cdd9ff 100%);
+  color: #e5edf9;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Utility */
+.page {
+  padding: 0 0 40px;
+  color: #e5edf9;
+}
+
+.page h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.35rem;
+}
+
+.page p {
+  margin: 0 0 1.5rem;
+  opacity: 0.7;
+}
+
+.muted {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}

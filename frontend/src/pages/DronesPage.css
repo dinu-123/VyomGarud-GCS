@@ -1,0 +1,241 @@
+.drones-page {
+  padding: 20px 40px 40px 32px;
+  color: #e5f0ff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+/* Header */
+
+.drones-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.drones-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: #f5f7ff;
+}
+
+.drones-subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: #a6b3d6;
+}
+
+/* Primary button reused for Add Drone */
+
+.primary-button {
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 0.75),
+    0 0 0 1px rgba(147, 197, 253, 0.5);
+  transition:
+    transform 0.1s ease-out,
+    box-shadow 0.15s ease-out,
+    background 0.15s ease-out;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.85),
+    0 0 0 1px rgba(191, 219, 254, 0.65);
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 10px 20px rgba(15, 23, 42, 0.7),
+    0 0 0 1px rgba(147, 197, 253, 0.8);
+}
+
+/* Main card */
+
+.drones-card {
+  border-radius: 26px;
+  background: radial-gradient(circle at top left, #11182f 0, #050b1d 60%, #02040b 100%);
+  box-shadow:
+    0 30px 60px rgba(1, 4, 16, 0.9),
+    0 0 0 1px rgba(60, 84, 145, 0.6);
+  padding: 18px 18px 20px;
+}
+
+/* Empty state */
+
+.drones-empty {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.drones-empty-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #f5f7ff;
+}
+
+.drones-empty-text {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #9fb4e9;
+}
+
+/* Table */
+
+.drones-table-wrapper {
+  overflow-x: auto;
+}
+
+.drones-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  font-size: 0.85rem;
+}
+
+.drones-table thead tr {
+  border-bottom: 1px solid rgba(73, 102, 169, 0.8);
+}
+
+.drones-table th,
+.drones-table td {
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.drones-table th {
+  font-weight: 500;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7f93c9;
+}
+
+.drones-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Row styling + hover */
+
+.drones-row {
+  border-bottom: 1px solid rgba(33, 48, 99, 0.9);
+  transition:
+    background 0.12s ease-out,
+    transform 0.08s ease-out,
+    box-shadow 0.12s ease-out;
+  cursor: pointer;
+}
+
+.drones-row:hover {
+  background: rgba(15, 23, 42, 0.9);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(1, 6, 24, 0.9);
+}
+
+/* First column: drone info */
+
+.col-drone {
+  width: 32%;
+}
+
+.drone-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.drone-status-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 6px rgba(48, 190, 118, 0.15);
+}
+
+.drone-status-dot--online {
+  background: #22c55e;
+}
+
+.drone-status-dot--offline {
+  background: #f97373;
+  box-shadow: 0 0 0 6px rgba(248, 113, 113, 0.15);
+}
+
+.drone-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.drone-name {
+  font-weight: 500;
+  color: #f9fbff;
+}
+
+.drone-model {
+  font-size: 0.78rem;
+  color: #a6b3d6;
+}
+
+/* Status column */
+
+.col-status {
+  text-align: right;
+  width: 12%;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.status-pill--online {
+  background: rgba(21, 128, 61, 0.2);
+  color: #bbf7d0;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.7);
+}
+
+.status-pill--offline {
+  background: rgba(127, 29, 29, 0.25);
+  color: #fecaca;
+  box-shadow: 0 0 0 1px rgba(248, 113, 113, 0.7);
+}
+
+/* Small-screen tweaks */
+
+@media (max-width: 900px) {
+  .drones-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primary-button {
+    align-self: stretch;
+    text-align: center;
+    width: 100%;
+  }
+
+  .drones-card {
+    padding: 14px 12px 16px;
+  }
+}

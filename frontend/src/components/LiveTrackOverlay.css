@@ -1,0 +1,204 @@
+/* src/components/LiveTrackOverlay.css */
+
+.lt-overlay-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999; /* above dashboard */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lt-overlay-shell {
+  position: relative;
+  width: 96%;
+  height: 90%;
+  background: #000;
+  border-radius: 18px;
+  padding: 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.75);
+}
+
+.lt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.lt-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.lt-drone-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.lt-status-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.lt-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #18c964;
+}
+
+.lt-close-btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.lt-close-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lt-main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) 260px;
+  gap: 16px;
+}
+
+/* Video area */
+
+.lt-video-area {
+  background: radial-gradient(circle at top, #333 0, #000 60%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.lt-waiting-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.lt-live-dummy-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #777 0, #333 30%, #000 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lt-crosshair {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+
+.lt-crosshair::before,
+.lt-crosshair::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.lt-crosshair::before {
+  width: 1px;
+  height: 120px;
+}
+
+.lt-crosshair::after {
+  width: 120px;
+  height: 1px;
+}
+
+.lt-live-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ff3b3b;
+}
+
+/* Telemetry */
+
+.lt-telemetry-panel {
+  background: #05060a;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.85rem;
+}
+
+.lt-telemetry-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.lt-telemetry-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.lt-telemetry-row:last-child {
+  border-bottom: none;
+}
+
+/* Mini map bottom-right */
+
+.lt-minimap {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  width: 260px;
+  height: 180px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.lt-minimap-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* small drone icon in minimap */
+.lt-drone-icon {
+  font-size: 20px;
+  filter: drop-shadow(0 0 4px #000);
+}
